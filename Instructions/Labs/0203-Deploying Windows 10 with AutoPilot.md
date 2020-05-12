@@ -24,7 +24,7 @@ Task 1: Customize Azure AD company branding
 3.  In Microsoft Edge, in the address bar, type <https://portal.azure.com>, and
     then press Enter.
 
-4.  Sign in as user **Admin\@yourtenant.onmicrosoft.com**, and use the tenant
+4.  Sign in as user **Admin@yourtenant.onmicrosoft.com**, and use the tenant
     Admin password.
 
 5.  In the Microsoft Azure portal, in the navigation pane, select **Azure Active
@@ -147,24 +147,17 @@ type C:\Computer.csv
 
 1.  On **LON-CL5**, in **Microsoft Edge**, open a new tab and navigate to
     **https://office.com**. If prompted, sign in with your
-    **Admin\@yourtenant.onmicrosoft.com**.
+    **Admin@yourtenant.onmicrosoft.com**.
 
 2.  select **Admin**, and then, in the **Microsoft 365 admin center**, select
-    **Show all**, select **All admin centers**, and then select the **Device
-    Management** tile. A new tab opens.
+    **Show all**, select **All admin centers**, and then select the **Endpoint Manager** tile. A new tab opens.
 
-3.  In the **Microsoft 365 Device Management** console, in the details pane,
-    select **Device enrollment** on the right.
-
-4.  On the **Choose MDM Authority** blade which appears on the right, select
-    **Intune MDM Authority** and select **Choose**.  
-      
-    *Note: Setting the MDM Authority is not an exclusive step for Autopilot, but
-    must be configured for using Intune and Autopilot.*
+3.  In the **Microsoft Endpoint Manager admin center** console, in the details pane,
+    select **Device**, and then select the **Enroll devices**
 
 5.  On the Device enrollment blade, select **Windows enrollment**.
 
-6.  In the details pane, select **Devices**.
+6.  In the **Windows Autopilot Deployment Program** console, in the details pane, select **Devices**.
 
 7.  On the menu bar, select **Import**, browse to **c:\\**, select
     **Computer.csv**, select **Open**, and then select **Import**. The import
@@ -204,8 +197,6 @@ type C:\Computer.csv
     -   Apply device name template: **No**.
 
 15.  select **Next**.
-
-16.  On the **Scope tags** blade, select **Next**.
 
 17.  On the **Assignments** blade, select **Select groups to include**.
 
