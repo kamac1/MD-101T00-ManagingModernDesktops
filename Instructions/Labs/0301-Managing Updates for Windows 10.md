@@ -93,12 +93,13 @@ deferred 45 days after release. You would like to test the settings first using 
 
 3.  Switch to **Windows Settings**.
 
-4.  In the navigation pane, select **Windows Insider Program**.
+4.  In the navigation pane, select **Windows Update**.
 
-5.  On the **Windows Insider Program** tab, notice the **Some settings are
+5.  On the **Windows Update** tab, notice the **Some settings are
     hidden or managed by your organization** banner.
-
-6.  Notice that the **Get started** button is unavailable.
+    
+6.  In the navigation pane, select Windows Insider Program
+    Notice that the **Get started** button is unavailable.
 
 7.  Select **Windows Update**.
 
