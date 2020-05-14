@@ -97,7 +97,7 @@ _Note: This will disable Windows Hello on the device and will disable the forced
 
 2.  Select **other user**, and in the **Email address** field type
     DiegoS**\@yourtenant.onmicrosoft.com**, and then select **Next**. In the
-    Password field, type **Pa55w.rd** and then press Enter.
+    Password field, type yourtenant **Passwort** and then press Enter.
 
 3.  Wait for the profile to be created. It will take around 30-60 seconds.  
     **Note:** When you are logged on using your Azure AD credentials you will
@@ -121,35 +121,33 @@ _Note: This will disable Windows Hello on the device and will disable the forced
     pane, select **+ Create profile**.
 
 6.  In the **Create profile** blade, enter/select the following information:
+-   Platform: **Windows 10 and later**
+
+-   Profile: **Device restrictions**
+Then select **Create**
 
 -   Name: **A. Datum developers - standard**
 
--   Description: **Basic restrictions and configuration for developers in A.
-    Datum.**
-
--   Platform: **Windows 10 and later**
-
--   Profile type: **Device restrictions**
+-   Description: **Basic restrictions and configuration for developers in A.Datum.**
+Then select **Next**
 
 7.  On the **Device restrictions** blade, select **Control Panel and Settings**.
-    Select **Block** next to **Gaming** and **Privacy**. Then select **OK**.
+    Select **Block** next to **Gaming** and **Privacy**. 
 
 8.  Back on the **Device restrictions** blade, select **Start**. Scroll down and
     select **Block** next to **Most used apps** and **Recently added apps**.
-    Then select **OK**.
+    
 
 9.  Back on the **Device restrictions** blade, scroll down and select **Windows
     Defender Antivirus**. On the **Windows Defender Antivirus,** scroll down and
     select **Windows Defender Antivirus Exclusions**.
 
 10.  On the **Windows Defender Antivirus Exclusions** blade, in the **Files and
-    folders** box, type the following and then select **Add**:
-    **C:\\DevProjects**.
+    folders** box, type the following **C:\\DevProjects**.
 
-11.  In the **Processes** box, type the following and then select **Add**:
-    **DevBuild.exe**. Then select **OK** twice.
+11.  In the **Processes** box, type the following **DevBuild.exe**. 
 
-12.  Back on the **Device restrictions** blade, select **OK** twice and then select
+12.  Back on the **Device restrictions** blade, select **Next** four and then select
     **Create**.
 
 ### Task 5: Create the Adatum developer device group
@@ -170,8 +168,7 @@ _Note: This will disable Windows Hello on the device and will disable the forced
 
 -   Membership type: **Assigned**
 
-4.  Select **Members** and on the **Select members** blade, in the **Search by
-    name or mail address**, type **lon**. Select **LON-CL3** and then select
+4.  On the **Members** select **No members selected** and in the **Search**, type **lon**. Select **LON-CL3** and then select
     **Select**.
 
 5.  Back on the **Group** blade, select **Create**. Close the **Group** blade by
@@ -195,17 +192,18 @@ _Note: This will disable Windows Hello on the device and will disable the forced
 
     3.  Membership type: **Dynamic Device**
 
-4.  On the **Group** blade, select **Dynamic device members**.
+4.  On the **New Group** blade, select **Dynamic device members**.
 
 5.  Select **Add dynamic query**. On the **Dynamic membership rules** blade, in the **Rule syntax** section,
     select **Edit**. 
     
-6.  In the Edit rule syntax text box, add the following simple membership rule and select **Ok**.
+6.  In the Edit rule syntax text box, add the following simple membership rule.
 
 ```
     device.deviceOSType -contains "Windows"
 
-```
+``` 
+Select **Ok**
 7.  On the **Dynamic membership rules** blade, select **Save** and then **Create**.
 
 ### Task 7: Deploy device profile to Windows 10 device
@@ -216,14 +214,14 @@ _Note: This will disable Windows Hello on the device and will disable the forced
 2.  On the **Device configuration** blade, select **Profiles**. In the details
     pane, select the **A. Datum developers – standard** profile.
 
-3.  On the **A. Datum developers – standard** blade, select **Assignments**. On
-    the **A. Datum developers – standard – Assignments** blade, select **Select
-    groups to include**.
+3.  On the **A. Datum developers – standard** blade, select **Properties** and then **Assignments Edit**. On
+    the **Device restrictions** blade, select **Select
+    group to include**.
 
-4.  On the **Select members** blade, in the **Search by name or mail address**,
+4.  On the **Select group to include** blade, in the **Search**,
     type **A**. Select **A. Datum developer devices** and then select **Select**.
 
-5.  Back on the **A. Datum developers – standard** blade, select **Save**.
+5.  Back on the **Device restrictions** blade, select **Review + Save** and then **Save** 
 
 ### Task 8: Verify on the device that device profile is applied
 
@@ -236,8 +234,7 @@ _Note: This will disable Windows Hello on the device and will disable the forced
 3.  In the **Access work or school** section, select the **Connected to Contoso’s
     Azure AD** link and then select **Info**.
 
-4.  In the **Managed by Contoso** dialog box, select **Info**.  On the Managed by Azure
-    AD page, select **Sync**. Wait for the synchronization to complete.  
+4.  On the **Managed by Contoso** page, select **Sync**. Wait for the synchronization to complete.  
     
     _Note: The sync progress should only take a few seconds, however it may take up
     to 15 minutes before the profile is applied to Windows 10 device. Signing out or
