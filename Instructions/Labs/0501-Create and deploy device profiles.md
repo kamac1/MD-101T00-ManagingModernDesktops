@@ -97,7 +97,7 @@ _Note: This will disable Windows Hello on the device and will disable the forced
 
 2.  Select **other user**, and in the **Email address** field type
     DiegoS**\@yourtenant.onmicrosoft.com**, and then select **Next**. In the
-    Password field, type **Pa55w.rd** and then press Enter.
+    Password field, type yourtenant **Passwort** and then press Enter.
 
 3.  Wait for the profile to be created. It will take around 30-60 seconds.  
     **Note:** When you are logged on using your Azure AD credentials you will
